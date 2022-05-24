@@ -1,0 +1,453 @@
+$font: "Noto Sans", sans-serif;
+$black: #303030;
+$white: #ffffff;
+$gray: #868585;
+$hover_color: #a9a32a;
+
+@import "_global";
+@import "_nullStyle";
+@import "_libs";
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+.header {
+    background-image: url(../img/header_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        margin-top: 70px;
+    }
+    &__top {
+        font-size: 18px;
+        line-height: 25px;
+        color: $white;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-size: 64px;
+        line-height: 87px;
+        font-weight: bold;
+        color: $white;
+    }
+    &__bottitle {
+        font-size: 42px;
+        line-height: 57px;
+        color: $white;
+    }
+    &__btn {
+        background-color: transparent;
+        padding: 5px 10px;
+        transition: all 0.5s;
+        color: $white;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 109px;
+        &:hover {
+            background-color: $hover_color;
+            color: $white;
+            border-radius: 15px;
+        }
+    }
+    &__socNetwork {
+        a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            margin: 0 10px;
+            margin-bottom: 42px;
+        }
+        .insta {
+            background-image: url(../img/instagram.png);
+        }
+        .telega {
+            background-image: url(../img/telegram.png);
+        }
+        .watsapp {
+            background-image: url(../img/whatsapp.png);
+        }
+        .facebook {
+            background-image: url(../img/facebook.png);
+        }
+    }
+}
+.main {
+    width: 100%;
+}
+
+.services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    &__title {
+        font-size: 24px;
+        line-height: 33px;
+        color: $gray;
+        font-weight: bold;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__items {
+        margin-top: 60px;
+        width: 510px;
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            margin-bottom: 15px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+            margin-bottom: 50px;
+        }
+    }
+    &__img {
+        height: 670px;
+    }
+}
+.greenRate {
+    margin-top: 150px;
+    &__inner {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 150px;
+        justify-content: space-between;
+    }
+    &__sliderAndoffer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 90px;
+    }
+    &__offers {
+        display: grid;
+        grid-template-columns: 235px 235px;
+        grid-gap: 17px 40px;
+    }
+    &__offer {
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+        }
+    }
+    &__text {
+        &-text {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            margin-bottom: 17px;
+        }
+        &-img {
+            object-fit: cover;
+            width: 600px;
+            height: 525px;
+        }
+    }
+    .slider-dots {
+        display: flex;
+        // margin-bottom: 120px;
+        &__item {
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            &:nth-child(2) {
+                margin: 0 40px;
+            }
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+    &__slider {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 510px;
+
+        &-item {
+            width: 504px;
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-btnL {
+            background-image: url(../img/ArrowL.png);
+            width: 40px;
+            height: 3px;
+        }
+        &-btnR {
+            background-image: url(../img/ArrowR.png);
+        }
+        &-img {
+            width: 235px;
+            height: 200px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+            // margin-left: 40px;
+            width: 235px;
+        }
+    }
+}
+.citate {
+    width: 100%;
+    background-image: url(../img/citate_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__text {
+        // width: 637px;
+        font-size: 42px;
+        line-height: 57px;
+        text-align: center;
+        color: $white;
+        margin: 0 auto;
+        padding: 128px 0;
+    }
+}
+
+.clients {
+    margin-top: 150px;
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__inner {
+        display: flex;
+        width: 100%;
+    }
+    &__slider {
+        &-inner {
+            width: 510px;
+            display: flex;
+        }
+    }
+    &__form {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: transparent;
+            margin: 0 15px;
+        }
+    }
+    &__info {
+        margin-left: 91px;
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            margin-bottom: 30px;
+        }
+        &-text {
+            li {
+                padding: 7px 50px;
+            }
+        }
+        &-btn {
+            margin-top: 86px;
+            background-color: transparent;
+            padding: 5px 10px;
+            transition: all 0.5s;
+            color: $black;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 109px;
+            border: 1px solid $black;
+            border-radius: 15px;
+            &:hover {
+                background-color: $hover_color;
+                color: $black;
+            }
+        }
+    }
+}
+
+.fivesteps {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__list {
+        counter-reset: myCounter;
+    }
+    &__item {
+        list-style: none;
+        padding: 15px 0;
+        &::before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            font-size: 14px;
+            line-height: 19px;
+            color: $gray;
+            padding-bottom: 11px;
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            padding-bottom: 7px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+        }
+    }
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-image: url(../img/footer_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 150px;
+    &__inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 33px;
+            color: $white;
+            margin-bottom: 60px;
+            margin-top: 70px;
+        }
+    }
+    &__input {
+        width: 510px;
+        border-bottom: 1px solid $white;
+        background: transparent;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+        padding-bottom: 11px;
+        padding-left: 10px;
+        padding-right: 10px;
+        &::placeholder {
+            font-size: 14px;
+            line-height: 19px;
+            color: $white;
+        }
+    }
+    &__btn {
+        max-width: 300px;
+        background-color: transparent;
+        padding: 5px 10px;
+        transition: all 0.5s;
+        color: $white;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 109px;
+        border: 1px solid $white;
+        border-radius: 15px;
+        &:hover {
+            background-color: $hover_color;
+        }
+    }
+    .tel {
+        margin-top: 60px;
+    }
+    &__info {
+        // margin-left: 91px;
+        display: flex;
+        flex-direction: column;
+        &-title {
+            margin-top: 70px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 33px;
+            color: $white;
+            margin-bottom: 60px;
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 25px;
+            color: $white;
+            margin: 30px 0;
+        }
+        &-tel {
+            color: $white;
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+        &-time {
+            font-size: 18px;
+            line-height: 25px;
+            color: $white;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 51px;
+    }
+    &__socNetwork {
+        display: flex;
+        align-items: flex-end;
+        a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            margin: 0 10px;
+        }
+        .insta {
+            background-image: url(../img/instagram.png);
+        }
+        .telega {
+            background-image: url(../img/telegram.png);
+        }
+        .watsapp {
+            background-image: url(../img/whatsapp.png);
+        }
+        .facebook {
+            background-image: url(../img/facebook.png);
+        }
+    }
+}
